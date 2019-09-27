@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_27_111605) do
+ActiveRecord::Schema.define(version: 2019_09_27_133753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,23 @@ ActiveRecord::Schema.define(version: 2019_09_27_111605) do
     t.string "volunteer_gender"
     t.string "volunteer_skills"
     t.integer "number_needed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "organization_profiles", force: :cascade do |t|
+    t.string "type"
+    t.string "img"
+    t.string "address"
+    t.string "city"
+    t.string "website_link"
+    t.string "twitter_link"
+    t.string "instagram_link"
+    t.string "facebook_link"
+    t.string "snapchat_link"
+    t.string "whatsup_link"
+    t.string "linkedin_link"
+    t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
