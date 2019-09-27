@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Organization Profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Img</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Website link</th>
+      <th>Twitter link</th>
+      <th>Instagram link</th>
+      <th>Facebook link</th>
+      <th>Snapchat link</th>
+      <th>Whatsup link</th>
+      <th>Linkedin link</th>
+      <th>Phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @organization_profiles.each do |organization_profile| %>
+      <tr>
+        <td><%= organization_profile.type %></td>
+        <td><%= organization_profile.img %></td>
+        <td><%= organization_profile.address %></td>
+        <td><%= organization_profile.city %></td>
+        <td><%= organization_profile.website_link %></td>
+        <td><%= organization_profile.twitter_link %></td>
+        <td><%= organization_profile.instagram_link %></td>
+        <td><%= organization_profile.facebook_link %></td>
+        <td><%= organization_profile.snapchat_link %></td>
+        <td><%= organization_profile.whatsup_link %></td>
+        <td><%= organization_profile.linkedin_link %></td>
+        <td><%= organization_profile.phone %></td>
+        <td><%= link_to 'Show', organization_profile %></td>
+        <td><%= link_to 'Edit', edit_organization_profile_path(organization_profile) %></td>
+        <td><%= link_to 'Destroy', organization_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Organization Profile', new_organization_profile_path %>

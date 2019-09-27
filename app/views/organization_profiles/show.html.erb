@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @organization_profile.type %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @organization_profile.img %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @organization_profile.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @organization_profile.city %>
+</p>
+
+<p>
+  <strong>Website link:</strong>
+  <%= @organization_profile.website_link %>
+</p>
+
+<p>
+  <strong>Twitter link:</strong>
+  <%= @organization_profile.twitter_link %>
+</p>
+
+<p>
+  <strong>Instagram link:</strong>
+  <%= @organization_profile.instagram_link %>
+</p>
+
+<p>
+  <strong>Facebook link:</strong>
+  <%= @organization_profile.facebook_link %>
+</p>
+
+<p>
+  <strong>Snapchat link:</strong>
+  <%= @organization_profile.snapchat_link %>
+</p>
+
+<p>
+  <strong>Whatsup link:</strong>
+  <%= @organization_profile.whatsup_link %>
+</p>
+
+<p>
+  <strong>Linkedin link:</strong>
+  <%= @organization_profile.linkedin_link %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @organization_profile.phone %>
+</p>
+
+<%= link_to 'Edit', edit_organization_profile_path(@organization_profile) %> |
+<%= link_to 'Back', organization_profiles_path %>

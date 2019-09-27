@@ -1,0 +1,77 @@
+<%= form_with(model: organization_profile, local: true) do |form| %>
+  <% if organization_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(organization_profile.errors.count, "error") %> prohibited this organization_profile from being saved:</h2>
+
+      <ul>
+      <% organization_profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :img %>
+    <%= form.text_field :img %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :website_link %>
+    <%= form.text_field :website_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :twitter_link %>
+    <%= form.text_field :twitter_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :instagram_link %>
+    <%= form.text_field :instagram_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :facebook_link %>
+    <%= form.text_field :facebook_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :snapchat_link %>
+    <%= form.text_field :snapchat_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :whatsup_link %>
+    <%= form.text_field :whatsup_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :linkedin_link %>
+    <%= form.text_field :linkedin_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
