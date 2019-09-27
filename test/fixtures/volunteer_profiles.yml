@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  intrests: MyString
+  skills: MyString
+  img: MyString
+  address: MyString
+  phone: MyString
+  specialty: MyString
+  age: 2019-09-27
+
+two:
+  intrests: MyString
+  skills: MyString
+  img: MyString
+  address: MyString
+  phone: MyString
+  specialty: MyString
+  age: 2019-09-27

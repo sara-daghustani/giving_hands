@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Intrests:</strong>
+  <%= @volunteer_profile.intrests %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @volunteer_profile.skills %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @volunteer_profile.img %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @volunteer_profile.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @volunteer_profile.phone %>
+</p>
+
+<p>
+  <strong>Specialty:</strong>
+  <%= @volunteer_profile.specialty %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @volunteer_profile.age %>
+</p>
+
+<%= link_to 'Edit', edit_volunteer_profile_path(@volunteer_profile) %> |
+<%= link_to 'Back', volunteer_profiles_path %>
