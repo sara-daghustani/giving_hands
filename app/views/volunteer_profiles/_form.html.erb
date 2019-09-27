@@ -1,0 +1,52 @@
+<%= form_with(model: volunteer_profile, local: true) do |form| %>
+  <% if volunteer_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(volunteer_profile.errors.count, "error") %> prohibited this volunteer_profile from being saved:</h2>
+
+      <ul>
+      <% volunteer_profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :intrests %>
+    <%= form.text_field :intrests %>
+  </div>
+
+  <div class="field">
+    <%= form.label :skills %>
+    <%= form.text_field :skills %>
+  </div>
+
+  <div class="field">
+    <%= form.label :img %>
+    <%= form.text_field :img %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :specialty %>
+    <%= form.text_field :specialty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.date_select :age %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
