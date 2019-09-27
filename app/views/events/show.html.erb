@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @event.img %>
+</p>
+
+<p>
+  <strong>Event type:</strong>
+  <%= @event.event_type %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @event.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @event.end_date %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @event.city %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @event.address %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @event.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @event.end_time %>
+</p>
+
+<p>
+  <strong>Volunteer type:</strong>
+  <%= @event.volunteer_type %>
+</p>
+
+<p>
+  <strong>Volunteer gender:</strong>
+  <%= @event.volunteer_gender %>
+</p>
+
+<p>
+  <strong>Number needed:</strong>
+  <%= @event.number_needed %>
+</p>
+
+<p>
+  <strong>Volunteer skills:</strong>
+  <%= @event.volunteer_skills %>
+</p>
+
+<p>
+  <strong>Requirements:</strong>
+  <%= @event.requirements %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  img: MyString
+  event_type: MyString
+  start_date: 2019-09-27
+  end_date: 2019-09-27
+  city: MyString
+  address: MyString
+  description: MyText
+  start_time: 2019-09-27 12:41:47
+  end_time: 2019-09-27 12:41:47
+  volunteer_type: MyString
+  volunteer_gender: MyString
+  number_needed: 1
+  volunteer_skills: MyString
+  requirements: MyString
+
+two:
+  title: MyString
+  img: MyString
+  event_type: MyString
+  start_date: 2019-09-27
+  end_date: 2019-09-27
+  city: MyString
+  address: MyString
+  description: MyText
+  start_time: 2019-09-27 12:41:47
+  end_time: 2019-09-27 12:41:47
+  volunteer_type: MyString
+  volunteer_gender: MyString
+  number_needed: 1
+  volunteer_skills: MyString
+  requirements: MyString
