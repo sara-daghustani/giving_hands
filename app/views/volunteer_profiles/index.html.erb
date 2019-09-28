@@ -5,12 +5,12 @@
 <table>
   <thead>
     <tr>
-      <th>Intrests</th>
+      <th>Interests</th>
       <th>Skills</th>
       <th>Img</th>
       <th>Address</th>
       <th>Phone</th>
-      <th>Specialty</th>
+      <th>Speciality</th>
       <th>Age</th>
       <th colspan="3"></th>
     </tr>
@@ -19,12 +19,12 @@
   <tbody>
     <% @volunteer_profiles.each do |volunteer_profile| %>
       <tr>
-        <td><%= volunteer_profile.intrests %></td>
+        <td><%= volunteer_profile.interests %></td>
         <td><%= volunteer_profile.skills %></td>
         <td><%= volunteer_profile.img %></td>
         <td><%= volunteer_profile.address %></td>
         <td><%= volunteer_profile.phone %></td>
-        <td><%= volunteer_profile.specialty %></td>
+        <td><%= volunteer_profile.speciality %></td>
         <td><%= volunteer_profile.age %></td>
         <td><%= link_to 'Show', volunteer_profile %></td>
         <td><%= link_to 'Edit', edit_volunteer_profile_path(volunteer_profile) %></td>

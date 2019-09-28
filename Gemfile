@@ -1,9 +1,11 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem "devise"
-
+gem 'jquery-rails'
+gem 'bootstrap-sass', '~> 3.3.6'  
+gem 'bootstrap', '~> 4.3.1'
 ruby '2.6.1'
-
+gem 'rb-readline'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record

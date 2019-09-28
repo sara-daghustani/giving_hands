@@ -1,0 +1,58 @@
+<nav class= "navDark navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container" style="height: 40px;">
+        <a class="navbar-brand navlogo" href="#">Giving Hands 
+        </a> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+ 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                 <%=link_to "Home", home_path, class:"navbar-brand"%>
+            </li>
+
+            <li class="nav-item ">
+                   <%=link_to "New Event", new_event_path, class:"navbar-brand"%>
+            </li>
+
+        <%if user_signed_in? %>
+            <% if current_user.user_type == "volunteer"%> 
+            <li class="nav-item dropdown">
+                <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Volunteer Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Volunteer Profile</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <%=link_to "Sign out",  destroy_user_session_path, method: :delete, class:"navbar-brand dropdown-item"%>
+                </div>
+            </li>
+            <%else%>
+            <li class="nav-item dropdown">
+                <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Organization Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Organization Profile</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <%=link_to "Sign out",  destroy_user_session_path, method: :delete, class:"navbar-brand dropdown-item"%>
+                </div>
+            </li>
+            <%end%>
+        <%else%>
+            <li class="nav-item">
+                <%=link_to "Sign In ", new_user_session_path, class:"navbar-brand"%>  
+            </li>
+            <li class="nav-item">
+                <%=link_to "Sign Up", new_user_registration_path, class:"navbar-brand navsignin"%>  
+            </li>
+        <%end%>
+        </ul>
+    </div>
+</nav>
+     
+     
