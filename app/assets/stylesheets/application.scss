@@ -47,9 +47,6 @@
     color: rgb(255, 255, 255) !important;
   }
   
-  * {
-    transition-duration: 0.3s;
-  }
 
   .links{
     display: flex;
@@ -63,6 +60,11 @@
   .row{
     margin: auto;
     justify-content: center;
+  }
+
+  .flex{
+    display: flex;
+    flex-wrap: wrap;
   }
 
 

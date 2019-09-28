@@ -1,3 +1,92 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cover-page {
+    height: 100vh;
+  }
+
+#headerbg {
+    background-size: cover;
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);
+  }
+
+  #headerbg h1 {
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+  }
+ 
+  .wrapped-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+
+  }
+
+  .item-center {
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  
+.card {
+    margin: 10px 0px;
+  }
+  
+  @media (min-width: 284px) {
+    .card-columns {
+      margin: 0px 20px;
+    }
+    .tour-msg {
+      margin: 0px 10px;
+    }
+  }
+  @media (min-width: 576px) {
+    .card-columns {
+      -webkit-column-count: 2 !important;
+      -moz-column-count: 2 !important;
+      column-count: 2 !important;
+    }
+  
+  }
+  @media (min-width: 986px) {
+    .card-columns {
+      -webkit-column-count: 3 !important;
+      -moz-column-count: 3 !important;
+      column-count: 3 !important;
+    }
+  }
+
+
+  .row{
+    margin: auto;
+    justify-content: center;
+  }
+
+  .EventE {
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    border: .5px solid rgb(139, 187, 190);
+    box-shadow: 0 3px 8px 0 rgb(192, 192, 192); 
+    background-color:whitesmoke;
+}
+ 
+.subComponent-lg {
+    padding: 80px 0px;
+  }
+
+.EventE:hover {
+    background-color:rgba(14, 139, 148, 0.116);
+    cursor: pointer;
+}
+
+ 
