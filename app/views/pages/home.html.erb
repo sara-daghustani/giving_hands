@@ -1,2 +1,35 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<header>
+    <main class="cover-page" id="headerbg">
+        <section class="wrapped-page">
+            <div class="item-center">
+                
+                <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                    <h1>Giving Hands</h1>
+                    <br>
+                    <h3>Alone We can do little; Together we can do so Much. - Helen Keller </h3>
+                    <input class="form-control" type="text" placeholder="Volenteer" aria-label="Search" />
+                        <div class="carousel-item active">
+                        <%= image_tag("https://intermountainhealthcare.org/-/media/images/modules/blog/posts/2019/03/volunteering-is-good-for-you-and-your-kids.jpg?la=en&h=504&w=896&mw=896&hash=12B60E2046185023A7BB36AF203332C86DB664AE", class:" d-block img-d", alt:"First slide") %>
+                        </div>
+
+                        <div class="carousel-item">
+                        <%= image_tag("https://365atlantatraveler.com/wp-content/uploads/2018/11/volunteer.jpg",  class:"d-block img-d", alt:"Second slide") %>
+                        </div>
+
+                        <div class="carousel-item">
+                        <%= image_tag("https://www.kvcdp.org/images/slide2.jpg", class:"d-block img-d", alt:"Third slide") %>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</header>
+
