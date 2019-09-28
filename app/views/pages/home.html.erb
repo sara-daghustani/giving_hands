@@ -1,35 +1,46 @@
 <header>
     <main class="cover-page" id="headerbg">
         <section class="wrapped-page">
-            <div class="item-center">
-                
-                <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    </ol>
-                    <div class="carousel-inner">
+                <div class="item-center">
                     <h1>Giving Hands</h1>
                     <br>
                     <h3>Alone We can do little; Together we can do so Much. - Helen Keller </h3>
                     <input class="form-control" type="text" placeholder="Volenteer" aria-label="Search" />
-                        <div class="carousel-item active">
-                        <%= image_tag("https://intermountainhealthcare.org/-/media/images/modules/blog/posts/2019/03/volunteering-is-good-for-you-and-your-kids.jpg?la=en&h=504&w=896&mw=896&hash=12B60E2046185023A7BB36AF203332C86DB664AE", class:" d-block img-d", alt:"First slide") %>
-                        </div>
-
-                        <div class="carousel-item">
-                        <%= image_tag("https://365atlantatraveler.com/wp-content/uploads/2018/11/volunteer.jpg",  class:"d-block img-d", alt:"Second slide") %>
-                        </div>
-
-                        <div class="carousel-item">
-                        <%= image_tag("https://www.kvcdp.org/images/slide2.jpg", class:"d-block img-d", alt:"Third slide") %>
-                        </div>
-                    
-                    </div>
                 </div>
-            </div>
         </section>
     </main>
 </header>
+
+
+    <div class="container subComponent-lg">
+        <section>
+            <div class="row">
+                <% @events.each do |event| %>
+                <div class="EventE card">
+                  <%= image_tag("https://www.kvcdp.org/images/slide2.jpg", class:"card-img-top", width:"100%", height:"200") %> 
+                    <%# <%= image_tag(event.img, class:"card-img-top", width:"100%", height:"200") %> 
+                    <div class= "card-body">
+                        <div class= "card-title">
+                            <strong><%= event.title %></strong>
+                        </div>
+                        <p class= "card-text">
+                            <strong>number of Volunteers:</strong>
+                            <%= event.number_needed %>
+                        </p>
+                        <p class= "card-text">
+                            <strong>Start on:</strong>
+                            <%= event.start_date.strftime("%B %e, %Y") %>
+                        </p>
+                        <p class= "card-text">
+                            <strong>Location:</strong>
+                            <%= event.city %>
+                        </p>
+                        <button type="button" class="btn btn-link"> More Details </button>
+                    </div>
+                </div>
+                <%end%>
+            </div>
+        </section>
+    </div>
+
 

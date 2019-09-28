@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem "devise"
 gem 'jquery-rails'
-gem 'bootstrap-sass', '~> 3.3.6'  
+gem 'bootstrap-sass', '~> 3.4.1'  
 gem 'bootstrap', '~> 4.3.1'
 ruby '2.6.1'
 gem 'rb-readline'

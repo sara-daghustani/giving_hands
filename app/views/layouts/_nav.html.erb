@@ -20,24 +20,24 @@
         <%if user_signed_in? %>
             <% if current_user.user_type == "volunteer"%> 
             <li class="nav-item dropdown">
-                <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="navbar-brand navsignin dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Volunteer Profile
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Volunteer Profile</a>
-                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">My Events</a>
                     <div class="dropdown-divider"></div>
                     <%=link_to "Sign out",  destroy_user_session_path, method: :delete, class:"navbar-brand dropdown-item"%>
                 </div>
             </li>
             <%else%>
             <li class="nav-item dropdown">
-                <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="navbar-brand navsignin dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Organization Profile
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Organization Profile</a>
-                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">My Events</a>
                     <div class="dropdown-divider"></div>
                     <%=link_to "Sign out",  destroy_user_session_path, method: :delete, class:"navbar-brand dropdown-item"%>
                 </div>
