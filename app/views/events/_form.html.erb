@@ -1,92 +1,129 @@
-<%= form_with(model: event, local: true) do |form| %>
-  <% if event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+<section class="jumbotron">
+  <div class="Forma">
+   <h5> <strong> Event Information:</strong> </h5>
+  <%= form_with(model: event, local: true) do |form| %>
+      <% if event.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
 
-      <ul>
-      <% event.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% event.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+      <div class="form-group">
+        <%= form.label :title, "Event Title"%>
+        <%= form.text_field :title, class:"form-control", placeholder:"Event Title" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :img %>
-    <%= form.text_field :img %>
-  </div>
+      <div class="form-group">
+        <%= form.label :img, "Event Image"%>
+        <%= form.text_field :img, class:"form-control", placeholder:"Event Image" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :event_type %>
-    <%= form.text_field :event_type %>
-  </div>
+      <div class="form-group">
+        <%= form.label :event_type, "Event Type" %>
+        <%= form.select :event_type, ["Choose Event Type","Community", "Environmental", "Medical",
+                                     "Education", "Technology", "Special Needs",
+                                      "Childern", "Senior", "Animal", "Others", ],{ disabled: 'Choose Event Type',  selected: 'Choose Event Type' }, class:"form-control"  %>
+    
+        <% if @event_type == "Others"%> 
+        <%= form.text_area :event_type%>
+        <%else%>
+        <%end%>
+      </div>
 
-  <div class="field">
-    <%= form.label :start_date %>
-    <%= form.date_select :start_date %>
-  </div>
+      <div class="form-row">
+        <div class="form-group col-md-5">
+        <%= form.label :start_date, "Event Start Date"%>
+        <%= form.date_select :start_date, class:"form-control" %>
+        </div>
+        <div class="form-group col-md-5">
+        <%= form.label :end_date, "Event End Date" %>
+        <%= form.date_select :end_date, class:"form-control" %>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= form.label :end_date %>
-    <%= form.date_select :end_date %>
-  </div>
+      <div class="form-row">
+        <div class="form-group col-md-5">
+        <%= form.label :start_time, "Event Start Time"%>
+        <%= form.date_select :start_time, class:"form-control" %>
+        </div>
+        <div class="form-group col-md-5">
+        <%= form.label :end_time, "Event End Time" %>
+        <%= form.date_select :end_time, class:"form-control"  %>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city %>
-  </div>
+      <div class="form-group">
+        <%= form.label :address , "Event Location"%>
+        <%= form.text_field :address, class:"form-control", placeholder:"555 siteen street" %>
+      </div>
+      <div class="form-group">
+        <%= form.label :city , "Event City"%>
+        <%= form.select :city, ["Choose Event City","Riyadh", "Jeddah", "Dammam", "Al-Khobar", 
+                                "Dhahran", "Al-Ahsa", "Qatif", "Jubail",
+                                "Taif", "Tabouk", "Abha", "Al Baha", "Jizan",
+                                "Najran", "Hail", "Makkah", "AL-Madinah",
+                                "Jouf", "Yanbu","Others"] ,{ disabled: 'Choose Event City',  selected: 'Choose Event City' }, class:"form-control" %>
+       <% if @city == "Others"%> 
+        <%= form.text_area :city%>
+        <%else%>
+        <%end%>
+      </div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
-  </div>
+      <div class="form-group">
+        <%= form.label :description , "Event Description"%>
+        <%= form.text_area :description , class:"form-control", placeholder:"Descripe The Event" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+      <hr>
+      <h5> <strong> Volunteer/s Needed:</strong> </h5>
 
-  <div class="field">
-    <%= form.label :start_time %>
-    <%= form.time_select :start_time %>
-  </div>
+      <div class="form-group">
+        <%= form.label :volunteer_type , "Category of Needed Volunteer/s"%>
+        <%= form.select :volunteer_type, ["Choose Volunteer/s Category","Children", 
+                                "Teenagers", "Adults", "Adults and Teenagers",
+                                "Seniors","Seniors and Adults", "Families",
+                                "Others" ,] ,{ disabled: 'Choose Volunteer/s Category',  selected: 'Choose Volunteer/s Category' }, class:"form-control" %>
+       
+        <% if @volunteer_type == "Others"%> 
+        <%= form.text_area :volunteer_type%>
+        <%else%>
+        <%end%>
+      </div>
 
-  <div class="field">
-    <%= form.label :end_time %>
-    <%= form.time_select :end_time %>
-  </div>
+      <div class="form-group">
+        <%= form.label :volunteer_gender , "Gender of Needed Volunteer/s"%>
+        <%= form.select :volunteer_gender, ["Choose a Gender of Needed Volunteer/s","Male Only", 
+                                "Female Only","Mixed Gender"] ,{ disabled: 'Choose a Gender of Needed Volunteer/s',  selected: 'Choose a Gender of Needed Volunteer/s' }, class:"form-control" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :volunteer_type %>
-    <%= form.text_field :volunteer_type %>
-  </div>
+      <div class="form-group">
+        <%= form.label :number_needed, "Number of Volunteer/s" %>
+        <%= form.number_field :number_needed, class:"form-control"  %>
+        </div>
+     
 
-  <div class="field">
-    <%= form.label :volunteer_gender %>
-    <%= form.text_field :volunteer_gender %>
-  </div>
+      <div class="form-group">
+        <%= form.label :volunteer_skills %>
+        <%= form.check_box :volunteer_skills, { :multiple => true }, 'foo', nil  %>
+        <%= form.check_box :volunteer_skills, { :multiple => true }, 'soo', nil  %>
+      </div>
 
-  <div class="field">
-    <%= form.label :number_needed %>
-    <%= form.number_field :number_needed %>
-  </div>
 
-  <div class="field">
-    <%= form.label :volunteer_skills %>
-    <%= form.text_field :volunteer_skills %>
+      <div class="form-group">
+        <%= form.label :requirements %>
+        <%= form.text_area :requirements, class:"form-control" %>
+      </div>
+        <div class="actions">
+        <%= form.submit "Submit", class:"btn btn-block btn-info"%>
+      </div>
+    <% end %>
   </div>
+  
+</section>
 
-  <div class="field">
-    <%= form.label :requirements %>
-    <%= form.text_field :requirements %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>

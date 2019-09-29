@@ -64,7 +64,11 @@
     }
   }
 
-
+  .card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
   .row{
     margin: auto;
     justify-content: center;
@@ -74,7 +78,7 @@
     width: 30%;
     margin: 10px;
     text-align: center;
-    border: .5px solid rgb(139, 187, 190);
+    border: 1px solid rgb(139, 187, 190);
     box-shadow: 0 3px 8px 0 rgb(192, 192, 192); 
     background-color:whitesmoke;
 }

@@ -118,12 +118,27 @@ margin-right: auto;
 margin-bottom: auto;
 margin-top: 80px;
 }
-.signininput{ 
-width: 300px;
-} 
 
-.SignupInput{
-width:250px;
+
+.form-control{
+  width:100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6C757D;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+select{
+  word-wrap: normal;
+  width: 32%;
+  height: calc(1.5em + .75rem + 2px);
 }
 
 .SignInBg {
@@ -163,6 +178,7 @@ text-align:center;
 .form-group{
   margin-right: 7px;
   margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .form-control{
@@ -171,4 +187,23 @@ text-align:center;
 
 .form-check-label {
 margin-bottom: 5px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+
+address{
+ font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+ a{
+  color: #666;
 }

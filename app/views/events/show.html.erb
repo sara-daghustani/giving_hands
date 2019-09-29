@@ -1,85 +1,92 @@
+
+<div class="jumbotron">
 <p id="notice"><%= notice %></p>
-<br>
-<br>
-<br>
 
-<h1> Event Content page </h1>
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+  <div class="row">
+    <div class="col">
+      <div class="float-right row">
+        <button class="EdDelbtn btn btn-outline-info"><%= link_to 'Back', request.referer %></button>
+        <button class="EdDelbtn btn btn-outline-info"><%= link_to 'Edit', edit_event_path(@event)%></button>
+        <button class="EdDelbtn btn btn-outline-info"><%= link_to 'Delete ', @event, method: :delete, data: { confirm: 'Are you sure?' }%></button>
+      </div>
+      <h3> <%= @event.title %> </h3>
+      <hr>
+      <div class="col">
+        <h5> <strong> Event Information:</strong> </h5>
+        <p>
+          <strong>Event type:</strong>
+          <%= @event.event_type %>
+        </p>
+        <p>
+          <strong>Start date:</strong>
+          <%= @event.start_date.strftime("%b %e, %Y") %> &nbsp
+          <strong>End date:</strong> 
+          <%= @event.end_date.strftime("%b %e, %Y") %>
+        </p>
 
-<p>
-  <strong>Img:</strong>
-  <%= @event.img %>
-</p>
+        <p>
+          <strong>Start time:</strong>
+          <%= @event.start_time.strftime("%I:%M %p") %> &nbsp
+          <strong>End time:</strong>
+          <%= @event.end_time.strftime("%I:%M %p") %>
+        </p>
 
-<p>
-  <strong>Event type:</strong>
-  <%= @event.event_type %>
-</p>
+        <p>
+           <strong>Address:</strong>
+          <%= @event.address %>, <%= @event.city %>
+        </p>
+        <p>
+          <strong>Description:</strong> <br>
+          <%= @event.description %>
+        </p>
+        <hr>
+        <h5> <strong> Volunteer/s Needed:</strong> </h5>
+        <p>
+          <strong>Volunteer/s type:</strong>
+          <%= @event.volunteer_type %>
+        </p>
 
-<p>
-  <strong>Start date:</strong>
-  <%= @event.start_date %>
-</p>
+        <p>
+          <strong>Volunteer/s gender:</strong>
+          <%= @event.volunteer_gender %>
+        </p>
 
-<p>
-  <strong>End date:</strong>
-  <%= @event.end_date %>
-</p>
+        <p>
+          <strong>Number Of Vlounteer/s needed:</strong>
+          <%= @event.number_needed %>
+        </p>
 
-<p>
-  <strong>City:</strong>
-  <%= @event.city %>
-</p>
+        <p>
+          <strong>Volunteer/s skills:</strong>
+          <%= @event.volunteer_skills %>
+        </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @event.address %>
-</p>
+        <p>
+          <strong>Requirements:</strong>
+          <%= @event.requirements%>
+        </p>
+        <button class="btn btn-info">I want to help</button>
+      </div>
+    </div>
+    <div class="col">
+      <div class="row">
+        <%= image_tag(@event.img, class:"card-img img-fluid rounded", width:"100%", height:"50%")%>
+      </div>
+      <hr>
+      <address>
+        <strong>Contact us</strong>
+        <br>
+        3481 Melrose Place Beverly Hills, CA 90210
+        <br>
+        <abbr title="Phone">P:</abbr>
+          (123) 456-7890 <br>
+        <abbr title="Email">E:</abbr>
+        <a herf="mailto:#">name@example.com</a>
+      </address>
+      <br>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
 
-<p>
-  <strong>Start time:</strong>
-  <%= @event.start_time %>
-</p>
-
-<p>
-  <strong>End time:</strong>
-  <%= @event.end_time %>
-</p>
-
-<p>
-  <strong>Volunteer type:</strong>
-  <%= @event.volunteer_type %>
-</p>
-
-<p>
-  <strong>Volunteer gender:</strong>
-  <%= @event.volunteer_gender %>
-</p>
-
-<p>
-  <strong>Number needed:</strong>
-  <%= @event.number_needed %>
-</p>
-
-<p>
-  <strong>Volunteer skills:</strong>
-  <%= @event.volunteer_skills %>
-</p>
-
-<p>
-  <strong>Requirements:</strong>
-  <%= @event.requirements %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%# <%= link_to 'Back', events_path %>
-<%= link_to 'Back ', home_path %>
-<%= link_to 'Delete ', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%# <%= @event.img %> 
