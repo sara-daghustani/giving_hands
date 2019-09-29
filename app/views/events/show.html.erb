@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
+<br>
+<br>
+<br>
 
+<h1> Event Content page </h1>
 <p>
   <strong>Title:</strong>
   <%= @event.title %>
@@ -75,5 +79,7 @@
   <%= @event.requirements %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Edit ', edit_event_path(@event) %> 
+<%= link_to 'Delete ', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Back ', home_path %>
+
