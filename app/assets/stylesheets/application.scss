@@ -37,9 +37,6 @@ html {
     }
   }
 }
-
-
-
  .navbar{
     padding: 0;
     border-right:2px soild white;
@@ -87,5 +84,91 @@ html {
     flex-wrap: wrap;
   }
 
+  label {
+    font-size: 20px;
+    color: rgb(32, 156, 165);
+    margin-bottom: auto;
+  }
 
- 
+
+.btn-info{
+  font-size: 20px;
+  background-color: rgba(3, 118, 126, 0.671);
+  border-color: rgba(3, 118, 126, 0.671);
+}
+
+
+.Forma{
+  border-radius: 5px; 
+  border: .5px solid rgb(139, 187, 190);
+  box-shadow: 0 3px 8px 0 rgb(192, 192, 192); 
+  padding: 10px;
+  background-color:whitesmoke;
+}
+
+
+.Signin{
+ margin: auto;   
+ margin-right:60px;
+}
+
+.Signup{
+margin-left:85px;
+margin-right: auto;
+margin-bottom: auto;
+margin-top: 80px;
+}
+.signininput{ 
+width: 300px;
+} 
+
+.SignupInput{
+width:250px;
+}
+
+.SignInBg {
+background-size: cover;
+background-attachment: fixed;
+background-image: image-url("signin.png");
+}
+
+
+.SignUpBg {
+background-size: cover;
+background-attachment: fixed;
+background-image: url('../images/signup.png');
+}
+
+.Signtext1{
+font-weight: bold; 
+text-align:center;
+color: grey;
+}
+
+.Signtext2{
+color: grey;
+margin-bottom: 15px;
+text-align:center;
+}
+
+.Signtext3 {
+  color: rgb(175, 175, 175);
+  margin-bottom: auto;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.form-group{
+  margin-right: 7px;
+  margin-bottom: 10px;
+}
+
+.form-control{
+  display: block;
+}
+
+.form-check-label {
+margin-bottom: 5px;
+}

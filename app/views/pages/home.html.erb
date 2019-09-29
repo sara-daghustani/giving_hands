@@ -34,7 +34,7 @@
                             <strong>Location:</strong>
                             <%= event.city %>
                         </p>
-                        <button type="button" class="btn btn-link"> More Details </button>
+                        <button type="button" class="btn btn-link"> <%= link_to "More Details", event_path(event) %> </button>
                     </div>
                 </div>
                 <%end%>

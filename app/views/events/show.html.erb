@@ -76,4 +76,6 @@
 </p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%# <%= link_to 'Back', events_path %>
+<%= link_to 'Back ', home_path %>
+<%= link_to 'Delete ', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
