@@ -20,7 +20,7 @@ To get a local copy up and running follow these simple steps.
  
 1. Fork and Clone the repo
 ```sh
-git clone https:://github.com/github_username/repo.git
+git clone https://github.com/github_username/repo.git
 ```
 2. Install all the npm packages.
 
