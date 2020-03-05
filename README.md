@@ -68,11 +68,27 @@ npm start
 ----
 
 <h5>Features : </h5>
-
+<ul>
+<li> User will be able to change website routes on a single page.</li>
+<li> User will be able to add a New Post.</li>
+<li> User will be able to get more details about a post.</li>
+<li> A custom APIs developed for this website</li>
+<li> The website deployed into Heroku</li>
+</ul>
 ----
 
 <h5>Future Plan : </h5>
-
+<ul>
+ <li> Create Three Type Of Users, Admin, Organization and Volunteers</li>
+ <li> Users can Sign in and Sign up. </li>
+ <li> Volunteers can apply to an Event</li>
+ <li> Volunteers can add Inofrmation such as skills, courses to their profile</li>
+ <li> Organization can accept or reject the volunteer </li>
+ <li> Add Google Map Features. </li>
+ <li> Users Alarts</li>
+ <li> Add authentication and authorization</li>
+</ul>
+              
 ----
 
 <h5>Development Process:</h5> 
