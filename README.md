@@ -53,9 +53,27 @@ npm start
 
 ----
 
+<h5>Technologies :</h5>
+<p>It is a full stack application using React.js and Ruby on Rails as api.</p>
 
 
+----
 
+<h5>API Links :</h5>
+<ul> 
+ <li> <strong class="font-weight-bold">Events: </strong> https://eventy-api.herokuapp.com/events.json </li>
+ <li> <strong class="font-weight-bold"> Users: </strong> https://volunteery-api.herokuapp.com/api/v1/users/</li>
+</ul>
+
+----
+
+<h5>Features : </h5>
+
+----
+
+<h5>Future Plan : </h5>
+
+----
 
 <h5>Development Process:</h5> 
 <p> The website was built on React.js as a Front-End and Ruby on Rails as the back end for the api. Components were divided on team members to work on. Source controlling was used to merge all work. Styling was done using reactstrap and bootstrap libraries.</p>
