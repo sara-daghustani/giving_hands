@@ -35,9 +35,9 @@ npm start
 ----
 
 <h5> ScreenShots :</h5>
-  <img src="/giving2" alt="Image" >
-  <img src="/giving3" alt="Image" >
-  <img src="/giving4" alt="Image">
+  <img src="/giving2.png" alt="Image" >
+  <img src="/giving3.png" alt="Image" >
+  <img src="/giving4.png" alt="Image">
 
 ---
 <h5> Wireframe :</h5>
