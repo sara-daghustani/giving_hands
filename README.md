@@ -49,6 +49,23 @@ npm start
 
 ---
 
-<img src="i/" alt="Image">
+<img src="/" alt="Image">
 
 ----
+
+
+
+
+
+<h5>Development Process:</h5> 
+<p> The website was built on React.js as a Front-End and Ruby on Rails as the back end for the api. Components were divided on team members to work on. Source controlling was used to merge all work. Styling was done using reactstrap and bootstrap libraries.</p>
+
+----
+
+<h6><strong> Team Members:</strong></h6>
+<ul> 
+ <li>Abdulrahman Alrifae</li>
+ <li>Ahmed AlMeshaal</li>
+ <li>Eman Yahya</li>
+ <li>Sara Daghustani</li>
+</ul>
