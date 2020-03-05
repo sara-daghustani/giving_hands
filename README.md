@@ -41,15 +41,15 @@ npm start
 
 ---
 <h5> Wireframe :</h5>
-<img src="/" alt="Image">
+<img src="/Wireframe1" alt="Image">
 
 ---
 
-<img src="/" alt="Image" >
+<img src="/Wireframe2" alt="Image" >
 
 ---
 
-<img src="/" alt="Image">
+<img src="/Wireframe3" alt="Image">
 
 ----
 
